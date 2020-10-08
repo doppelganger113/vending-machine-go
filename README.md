@@ -1,5 +1,7 @@
 # vending-machine-go
-Console application that implements vending machine logic written in Go
+Console application that implements vending machine logic written in Go v1.15.
+
+![master](https://github.com/doppelganger113/vending-machine-go/workflows/Test/badge.svg)
 
 ## Description
 
@@ -44,9 +46,17 @@ go build
 
 Strict is false by default and refers to strict product order popping
 `cmd -strict=boolean <products> <buckets>` strict defaults to false.
-
+Running the following:
 ```bash
 ./vending-machine-go "1,2,3,4,5" "1,2,3,5,5;2,5,4,3,1;3,5,4,1,1;5,1,1,1,1"
+```
+...will produce:
+```bash
+Vending machine
+        [2 3 5 5]
+        [1]
+        [3 5 4 1 1]
+        [5 1 1 1 1]
 ```
 
 ## Testing
